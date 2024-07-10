@@ -77,7 +77,7 @@ app.post("/project", async (req, res) => {
   await ecsClient.send(command);
   return res.json({
     status: "queued",
-    data: { projectSlug, url: `http://${projectSlug}.localhost:8000` },
+    data: { projectSlug, url: `http://${projectSlug}.vercel-s3-reverse-proxy.onrender.com` }, //https://vercel-s3-reverse-proxy.onrender.com
   });
 });
 
