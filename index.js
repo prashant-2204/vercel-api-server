@@ -77,7 +77,7 @@ app.post("/project", async (req, res) => {
   await ecsClient.send(command);
   return res.json({
     status: "queued",
-    data: { projectSlug, url: `https://vercel-clone-pk.s3.eu-north-1.amazonaws.com/__outputs/${projectSlug}` }, //https://vercel-s3-reverse-proxy.onrender.com
+    data: { projectSlug, url: `https://vercel-clone-pk.s3.eu-north-1.amazonaws.com/__outputs/${projectSlug}/index.html` }, //https://vercel-s3-reverse-proxy.onrender.com
   });
 });
 
